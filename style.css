@@ -1,0 +1,60 @@
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden; /* To prevent scrollbars from appearing due to rotation */
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(00deg); /* Rotate the entire container for the desired orientation */
+    transform-origin: center;
+}
+
+.label {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.clock {
+    display: flex;
+    gap: 15px;
+}
+
+.time-unit {
+    background-color: #007bff; /* Blue for hours, adjust as needed */
+    padding: 20px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px; /* Ensure consistent width */
+}
+
+.time-unit:nth-child(2) {
+    background-color: #28a745; /* Green for minutes, adjust as needed */
+}
+
+.time-unit:nth-child(3) {
+    background-color: #dc3545; /* Red for seconds, adjust as needed */
+}
+
+.time-unit span:first-child {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.unit-label {
+    font-size: 0.8em;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
